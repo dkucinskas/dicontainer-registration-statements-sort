@@ -1,0 +1,58 @@
+{
+    "name": "dicontainer-registration-statements-sort",
+    "displayName": "DI Container registration statements sort",
+    "description": "Visual Studio Code plugin for sorting selected DI Container registration statements by dependency name.",
+    "version": "0.0.1",
+    "publisher": "dkucinskas",
+    "icon": "icon.png",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "keywords": [
+        "DI Container register",
+        "sort",
+        "node",
+        "node.js",
+        "javascript"
+    ],
+    "bugs": {
+        "url": "https://github.com/dkucinskas/dicontainer-registration-statements-sort/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dkucinskas/dicontainer-registration-statements-sort.git"
+    },
+    "homepage": "https://github.com/dkucinskas/dicontainer-registration-statements-sort",
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:dicontainer-registration-statements-sort.sort"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "dicontainer-registration-statements-sort.sort",
+                "title": "Sort requires"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "dicontainer-registration-statements-sort.sort",
+                "key": "shift+ctrl+r",
+                "mac": "shift+cmd+r",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "vscode": "^0.11.0"
+    },
+    "dependencies": {
+        "vsce": "^2.6.7"
+    }
+}
